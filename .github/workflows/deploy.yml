@@ -35,9 +35,9 @@ jobs:
       - name: Build with Gradle
         run: |
           ./gradlew build
-          mkdir numerical-mechanics-discovery
-          cp build/libs/* numerical-mechanics-discovery/
-          zip -r numerical-mechanics-discovery numerical-mechanics-discovery
+          mkdir stardust-discovery
+          cp build/libs/* stardust-discovery/
+          zip -r stardust-discovery stardust-discovery
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -55,8 +55,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          asset_path: ./numerical-mechanics-discovery.zip
-          asset_name: numerical-mechanics-discovery.zip
+          asset_path: ./stardust-discovery.zip
+          asset_name: stardust-discovery.zip
           asset_content_type: application/zip
 
       # Login against a Docker registry except on PR

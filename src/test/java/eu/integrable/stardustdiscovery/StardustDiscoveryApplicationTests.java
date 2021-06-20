@@ -1,4 +1,4 @@
-package eu.integrable.numericalmechanicsdiscovery;
+package eu.integrable.stardustdiscovery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
